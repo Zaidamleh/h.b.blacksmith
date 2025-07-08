@@ -4,29 +4,70 @@
     <meta charset="UTF-8" />
     <title>معرض H.B Blacksmith</title>
     <style>
+      * {
+        box-sizing: border-box;
+      }
+
       body {
-        background-color: #111;
-        color: gold;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
-        padding: 0;
-        text-align: center;
+        font-family: 'Cairo', sans-serif;
+        background: linear-gradient(to right, #0f0f0f, #1c1c1c);
+        color: #ffd700;
       }
 
       header {
         background-color: #000;
-        padding: 20px;
-        font-size: 28px;
+        color: #ffd700;
+        padding: 30px;
+        text-align: center;
+        font-size: 36px;
         font-weight: bold;
-        border-bottom: 2px solid gold;
+        border-bottom: 3px solid #ffd700;
+        letter-spacing: 2px;
       }
 
-      .section {
-        padding: 40px 20px;
-        border-bottom: 1px solid #333;
+      .hero {
+        text-align: center;
+        padding: 60px 20px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 20px;
+        color: #ccc;
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        background-color: #ffd700;
+        color: #000;
+        padding: 15px 30px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #e6c200;
       }
 
       .services {
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      .services h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+      }
+
+      .card-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -35,33 +76,26 @@
 
       .card {
         background-color: #222;
-        border: 1px solid gold;
-        border-radius: 10px;
+        border: 2px solid #ffd700;
+        border-radius: 12px;
         padding: 20px;
         width: 220px;
+        color: #fff;
+        font-size: 18px;
         transition: 0.3s;
       }
 
       .card:hover {
         background-color: #333;
-        transform: scale(1.05);
-      }
-
-      button {
-        background-color: gold;
-        border: none;
-        padding: 12px 24px;
-        font-size: 16px;
-        color: #000;
-        border-radius: 8px;
-        cursor: pointer;
-        margin-top: 20px;
+        transform: translateY(-5px);
       }
 
       footer {
         background-color: #000;
-        color: #777;
-        padding: 10px;
+        color: #888;
+        text-align: center;
+        padding: 15px;
+        margin-top: 40px;
         font-size: 14px;
       }
     </style>
@@ -72,25 +106,25 @@
       معرض H.B Blacksmith
     </header>
 
-    <div class="section">
-      <h1>أهلاً بك في عالم الحديد والفن!</h1>
-      <p>نُصمم ونُبدع كل ما تتخيله من الحديد بجودة عالية ودقة متقنة.</p>
-      <button onclick="alert('راسلنا عبر واتساب أو اتصل مباشرة للحجز')">سارع بالحجز</button>
-    </div>
+    <section class="hero">
+      <h1>أهلاً بك في عالم الحديد والفن</h1>
+      <p>تصميماتنا تجمع بين القوة والجمال، من أبواب متينة إلى درابزينات أنيقة، كل قطعة تُصنع بإتقان.</p>
+      <button class="btn" onclick="alert('للحجز: راسلنا عبر واتساب أو اتصل بنا مباشرة')">سارع بالحجز</button>
+    </section>
 
-    <div class="section">
+    <section class="services">
       <h2>خدماتنا</h2>
-      <div class="services">
+      <div class="card-container">
         <div class="card">أبواب حديدية</div>
-        <div class="card">درابزينات</div>
         <div class="card">شبابيك حماية</div>
+        <div class="card">درابزينات</div>
         <div class="card">باراكسات</div>
-        <div class="card">تصاميم خاصة</div>
+        <div class="card">حدادة عامة</div>
       </div>
-    </div>
+    </section>
 
     <footer>
-      &copy; 2025 جميع الحقوق محفوظة لـ H.B Blacksmith
+      &copy; 2025 جميع الحقوق محفوظة - H.B Blacksmith
     </footer>
 
   </body>
